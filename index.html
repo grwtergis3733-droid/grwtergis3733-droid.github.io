@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>이영근 포트폴리오</title>
+  <meta name="description" content="투자·부동산 도구를 직접 만드는 중">
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --surface: #ffffff;
+      --text: #1c1917;
+      --muted: #78716c;
+      --border: #e7e5e4;
+      --accent: #2563eb;
+      --accent-soft: #eff6ff;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #161514;
+        --surface: #1f1e1c;
+        --text: #f5f5f4;
+        --muted: #a8a29e;
+        --border: #34322f;
+        --accent: #60a5fa;
+        --accent-soft: #1e293b;
+      }
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+                   "Malgun Gothic", "Noto Sans KR", sans-serif;
+      line-height: 1.6;
+      word-break: keep-all;
+    }
+
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* 상단 */
+    header {
+      padding: 96px 0 64px;
+    }
+
+    header h1 {
+      font-size: clamp(2.25rem, 7vw, 3.25rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    header p {
+      margin-top: 12px;
+      font-size: clamp(1.05rem, 3vw, 1.25rem);
+      color: var(--muted);
+    }
+
+    /* 섹션 공통 */
+    section {
+      padding: 40px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    section h2 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    /* 만든 것: 카드 */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      min-height: 160px;
+      padding: 24px;
+      background: var(--surface);
+      border: 1px dashed var(--border);
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    .card .num {
+      font-size: 0.8rem;
+      margin-bottom: 6px;
+    }
+
+    /* 진행 중 */
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 18px;
+      background: var(--accent-soft);
+      border-radius: 999px;
+      font-weight: 500;
+    }
+
+    .status::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    /* 하단 */
+    footer {
+      padding: 40px 0 64px;
+      border-top: 1px solid var(--border);
+    }
+
+    footer h2 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 480px) {
+      header { padding: 64px 0 40px; }
+      .card { min-height: 120px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>이영근</h1>
+      <p>투자·부동산 도구를 직접 만드는 중</p>
+    </header>
+
+    <section>
+      <h2>만든 것</h2>
+      <div class="cards">
+        <div class="card"><span class="num">01</span>곧 채워질 예정</div>
+        <div class="card"><span class="num">02</span>곧 채워질 예정</div>
+        <div class="card"><span class="num">03</span>곧 채워질 예정</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>진행 중</h2>
+      <p class="status">20주 로드맵 1주차 진행 중</p>
+    </section>
+
+    <footer>
+      <h2>연락처</h2>
+      <!-- 아래 링크(href와 표시 텍스트 두 곳)의 이메일 주소를 실제 주소로 바꿔주세요 -->
+      <a href="mailto:you@example.com">you@example.com</a>
+    </footer>
+  </div>
+</body>
+</html>
