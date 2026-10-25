@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>이영근 포트폴리오</title>
-  <meta name="description" content="투자·부동산 도구를 직접 만드는 중">
+  <meta name="description" content="투자·부동산 도구를 직접 만드는 중. 20주 동안 매주 하나씩 만듭니다.">
   <style>
     :root {
       --bg: #fafaf9;
@@ -103,6 +103,30 @@
     }
 
     /* 진행 중 */
+    .progress {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .done {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0 18px;
+      color: var(--muted);
+    }
+
+    .done::before {
+      content: "✓";
+      width: 8px;
+      font-weight: 700;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
     .status {
       display: inline-flex;
       align-items: center;
@@ -154,7 +178,7 @@
   <div class="container">
     <header>
       <h1>이영근</h1>
-      <p>투자·부동산 도구를 직접 만드는 중</p>
+      <p>투자·부동산 도구를 직접 만드는 중. 20주 동안 매주 하나씩 만듭니다.</p>
     </header>
 
     <section>
@@ -168,7 +192,10 @@
 
     <section>
       <h2>진행 중</h2>
-      <p class="status">20주 로드맵 2주차 · 취득세 계산기 준비 중</p>
+      <ul class="progress">
+        <li class="done">1주차 완료: 포트폴리오 배포</li>
+        <li class="status">2주차 예정: 취득세 계산기</li>
+      </ul>
     </section>
 
     <footer>
